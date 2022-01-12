@@ -76,7 +76,7 @@ DPDK_CFLAGS += -I$(ISAL_DIR)
 DPDK_LDFLAGS += -L$(ISAL_DIR)/.libs -lisal
 endif
 
-DPDK_OPTS += -Dmachine=$(TARGET_ARCHITECTURE)
+DPDK_OPTS += -Dmachine=generic --buildtype=debug
 
 ifneq ($(CONFIG_CROSS_PREFIX),)
 ifeq ($(findstring mingw,$(CONFIG_CROSS_PREFIX)),mingw)
